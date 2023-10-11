@@ -4,16 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cats</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        main {
+            background-color: gray;
+            padding: 10px 0px 10px 0px;
+            border-radius: 2px;
+        }
+        h2, h3 {
+            font-size: 25px;
+            text-transform: uppercase;       
+        }
+        input, label,  fieldset {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        /* text decora funciona só no elemento <a>*/
+        ul , ol {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+         li {
+            padding: 10px;
+            /* para funcionar nas li usa list-style */
+            list-style-type: none;
+            margin: 5px;
+            font-size: 18px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
         <main>
             <h1>Cat PhotoApp</h1>
-            <h2>Cat Photos</h2>
-            <p>See more <a href="#" target="_blank">cat photos </a>in our gallary</p>
+                <h2>Cat Photos</h2>
+                <p>See more <a href="#" target="_blank">cat photos </a>in our gallary</p>
 
             <section>
                 <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back"></a>
             </section>
+
             <section>
                 <h2>Cat List</h2>
                 <h3>Things cats love:</h3>
