@@ -29,20 +29,40 @@
             padding: 20px;
             max-width: 500px;
         }
+        h1, h2 {
+            font-family: impact, serif;
+        }
         h1 , h2 ,p {
             text-align: center;
         }
+        /* dicas no hr */
         hr {
-
+            height: 2px;
+            background-color: brown;
+            border-color: brown;
         }
-        .flavor {
+        .bottom-line {
+            margin-top: 25px;
+        }
+        /* editando img */
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .flavor, .dessert {
             text-align: left;
+            width: 75%;
         }
         .price{
+            width: 25%;
             text-align: right;
         }
         .item p { /* fiquem na mesma linha, você precisa aplicar elementos inline*/
             display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -51,7 +71,7 @@
         <main>
             <h1>CAMPER CAFE</h1>
                 <p class="established">Est. 2020</p>
-            <hr>
+            <hr class="bottom-line">
             <section>
                 <h2>Coffee</h2>
                     <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="Coffee icon">
@@ -93,7 +113,7 @@
                 </article>
             </section>
         </main>
-        <hr>
+        <hr class="bottom-line">
         <footer>
             <p><a href="https://www.freecodecamp.org/" target="_blank">Visit our website</a></p>
             <p class="address">123 Free Code Camp Drive</p>
