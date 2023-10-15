@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colored Markers</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
+    <style>
+        * {
+            background-color: rgb(red, green, blue); 
+            /* as cores rgb                 255,    255         255*/
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            background-color: blueviolet;
+            padding: 10px 0;
+        }
+        .marker {
+            margin: 10px auto;
+            width: 200px;
+            height: 25px;
+            background-color: red;
+        }
+        /* familarizando com as cores rgb*/
+        .one { 
+            background-color: rgb(255, 127, 0);
+        }
+        .two {
+            background-color: rgb(0, 255, 255);
+        }
+    </style>
+</head>
+<body>
     <h1>CSS Color Markers</h1>
     <div class="container">
-      <div class="marker">
-      </div>
+        <div class="marker one"></div> <!--dois nome de class na mesma id-->
+        <div class="marker two"></div>
+        <div class="marker three"></div>
     </div>
-  </body>
+    
+</body>
 </html>
