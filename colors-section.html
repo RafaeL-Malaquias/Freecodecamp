@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Markers</title>
+    <style>
+        * {
+            background-color: rgb(red, green, blue); 
+            /*
+             Você já pode estar familiarizado com valores decimais, ou base 10, que vão de 0 a 9. Valores hexadecimais ou de base 16 vão de 0 a 9 e, depois, de A a F: 
+            */
+            /* as cores rgb                 255,    255         255*/
+            /* 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F */
+            /* 
+            Com cores hexadecimais, 00 é 0% dessa cor e FF é 100%. Então, #00FF00 traduz 0% vermelho, 100% verde e 0% azul, sendo igual a rgb(0, 255, 0). */
+
+            /* Modelos HSL 
+                A função do CSS hsl aceita 3 valores: um número de 0 a 360 para o matiz, uma porcentagem de 0 a 100 para saturação e uma porcentagem de 0 a 100 para a luz.
+                  background-color: hsl(240, 100%, 50%);
+            */
+            /* 
+            linear-gradient função  precisa de pelo menos dois argumentos de cores para funcionar.
+             background: linear-gradient (90deg, 255, 0,0);
+             background: linear-gradient(90deg, rgb(255, 0,0));
+
+                ex-- funcinando normal com 2 argumentos
+               background: linear-gradient  (90deg, rgb (255, 0, 0) , rgb(0, 255, 0));
+               background: linear-gradient(90deg, rgb(255, 0, 0),   rgb(0, 255, 0),     rgb(0, 0, 255));
+
+             */
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            background-color: blueviolet;
+            padding: 10px 0;
+        }
+        .marker {
+            margin: 10px auto;
+            width: 200px;
+            height: 25px;
+            background-color: red;
+        }
+        /* familarizando com as cores rgb*/
+        .one { 
+            background: linear-gradient();
+        }
+        .two {
+            background-color: rgb(0, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Color Markers</h1>
+    <div class="container">
+        <div class="marker one"></div> <!--dois nome de class na mesma id-->
+        <div class="marker two"></div>
+        <div class="marker three"></div>
+    </div>
+    
+</body>
+</html>
