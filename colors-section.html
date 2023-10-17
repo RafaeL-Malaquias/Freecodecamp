@@ -49,11 +49,26 @@
 
                  --------------------------------------------------------------
                  conceitos de bordar
+                    border: 1px solid color
 
                     border-left-width: 10px;
                     border-left-style: solid;
                     border-left-color: black;
+
                     para >-- border-left: 10px solid black;
+
+            -##----------------------------------------------------------- ##--
+            tanto offsetX como offsetY aceitam valores numéricos em px e em outras unidades do CSS
+            um valor positivo de offsetX move a sombra para a direita e um valor negativo a move para a esquerda
+            um valor positivo de offsetY move a sombra para baixo e um valor negativo a move para cima
+            se você quer um valor de zero (0) para offsetX, offsetY ou para os dois, você não precisa adicionar uma unidade. Todos os navegadores entendem que zero significa que não há alterações.
+            A altura e largura da sombra são determinadas pela altura e largura do elemento ao qual ela se aplica. Você também pode usar um valor opcional de spreadRadius para espalhar o alcance da sombra. 
+                    box-shadow:
+                    offsetX
+                    offsetY
+                    blurRadius
+                    spreadRadius
+                    box-shadow: 0px 0px 20px 0 blue;
 
              */
         }
@@ -62,7 +77,6 @@
             
         }
         .container {
-            background-color: blueviolet;
             padding: 10px 0;
         }
         .marker {
@@ -77,22 +91,25 @@
         .sleeve{
             width: 110px;
             height: 25px;
-            border-left: 10px solid black;
-            background-color: rgba(255,255. 255, 0,5);
+            border-left: 10px double black;
+            background-color: rgba( 255, 255, 255, 0.5);
         }
-        .cap, sleeve {
+        .cap, .sleeve {
             display: inline-block;
         }
 
-        /* familarizando com as cores rgb*/
+        /* familarizando com as cores rgb e usando no box-shadow:*/
         .red{ 
             background: linear-gradient(rgb(122,74,14), rgb(245,62,113), rgb(162,27,27));
+            box-shadow: 0 0 20px 0 rgba(83, 14,14, 0.8); /* Cor RGBA */
         }
         .green {
             background: linear-gradient(#55680d, #71f53e, #116c31);
+            box-shadow: 0 0 20px 0 #3B7E20CC; /* cor hexdecimal */
         }
         .blue{
             background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+            box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);  /*cor hsla Hue, Saturation, Lightness, and Alpha tem 0.8 de opacity*/ 
         }
 
     </style>
