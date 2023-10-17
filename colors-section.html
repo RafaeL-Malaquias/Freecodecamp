@@ -69,23 +69,36 @@
             margin: 10px auto;
             width: 200px;
             height: 25px;
-            background-color: red;
         }
+
         /* familarizando com as cores rgb*/
-        .one { 
-            background: linear-gradient();
+        .red{ 
+            background: linear-gradient(rgb(122,74,14), rgb(245,62,113), rgb(162,27,27));
         }
-        .two {
-            background-color: rgb(0, 255, 255);
+        .green {
+            background: linear-gradient(#55680d, #71f53e, #116c31);
         }
+        .blue{
+            background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+        }
+
     </style>
 </head>
 <body>
     <h1>CSS Color Markers</h1>
     <div class="container">
-        <div class="marker one"></div> <!--dois nome de class na mesma id-->
-        <div class="marker two"></div>
-        <div class="marker three"></div>
+        <div class="marker red"><!--dois nome de class na mesma id-->
+            <div class="cap"></div>
+            <div class="sleeve"></div>
+        </div> 
+        <div class="marker green">
+            <div class="cap"></div>
+            <div class="sleeve"></div>
+        </div>
+        <div class="marker blue">
+            <div class="cap"></div>
+            <div class="sleeve"></div>
+        </div>
     </div>
     
 </body>
