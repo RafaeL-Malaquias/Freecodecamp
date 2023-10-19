@@ -17,10 +17,23 @@
             display: block;
             margin: 0.5em 0px;
         }
+        input, textarea {
+            background-color: #0a0a23;
+            border: 1px solid #0a0a23;
+            color: #ffffff;
+            min-height: 2em; /* aumentando a letra dos placeholder ficando mais visiviel */
+        }
+        
+        /*   
+             Selecione apenas os elementos .inline e dê a eles uma width de unset. Isso removerá a regra anterior que define todos os elementos input para width: 100%. 
+            */
+        .inline {
+             width:unset;
+             vertical-align: middle; /* notara que os elementos estao altos demais na linha /
+        }
 
 
-
-
+        /*deixar um exmpleo de pseudo class*/ 
 
     </style>
 </head>
