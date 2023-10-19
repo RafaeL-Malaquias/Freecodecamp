@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Registro</title>
     <style>
         body{
             width: 100%;
@@ -63,8 +63,24 @@
         input[type="submit"]{
             display: block;
             width: 60%;
+            min-width: 300px;
             height: 2em;
             margin: 1em auto ; /* centralizando o botao submit*/
+            font-size: 1.1rem;
+            background-color: #3b3b4f;
+            border-color: white;
+        }
+        input[type="file"]{
+            padding: 10px 10px 3px 5px;
+        }
+        a{
+            color: white;
+        }
+        .terms-checkbox {
+            margin-bottom: 15px;
+        }
+        .terms {
+            text-align: center;
         }
 
     </style>
@@ -102,8 +118,8 @@
                             <textarea id="bio" name="bio" cols="30" rows="10" placeholder="I like coding on the beach..."></textarea>
                     </label>
                 </fieldset>
-                <label for="terms-and-conditions">
-                    <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>I aceept the <a href="">terms and conditions
+                <label for="terms-and-conditions" class="terms">
+                    <input class="terms-checkbox" type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>I aceept the <a href="">terms and conditions
                     </a>
                 </label>
                 <input type="submit" value="Submit" />
