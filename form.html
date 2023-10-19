@@ -29,11 +29,17 @@
             */
         .inline {
              width:unset;
-             vertical-align: middle; /* notara que os elementos estao altos demais na linha /
+             vertical-align: middle; /* notara que os elementos estao altos demais na linha */
         }
-
-
         /*deixar um exmpleo de pseudo class*/ 
+        fieldset:last-of-type {
+            border-bottom: none;
+        }
+        /* corrigndo name="password para type="submit" "*/
+        input[type="submit"]{
+            display: block;
+            width: 60%;
+        }
 
     </style>
 </head>
@@ -60,15 +66,17 @@
                 <fieldset>
                     <label for="">Upload a profile picture:<input type="file"></label>
                     <label for="">Inpute your age (years): <input type="number" min="13" max="120"></label>
-                    <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                    <label for="">
+                        <select name="" id="">
+                            <option value="">(Select one)</option>
+                            <option value="1">FreeCodeCamp News</option>
+                            <option value="2">FreeCodeCamp YouTube Channel</option>
+                            <option value="3">FreeCodeCamp Forum</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </label>
                     <label for="" ></label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
                 </fieldset>
         </form>
     
