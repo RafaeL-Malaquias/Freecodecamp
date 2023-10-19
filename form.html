@@ -37,30 +37,34 @@
         input, textarea , select {
             margin: 10px 0 0 0; /* margin em todos elementos*/
             width: 100%; /* usanto tood width do pai*/
-            min-height: 2em;
+            min-height: 2em;        /* aumentando a letra dos placeholder ficando mais visiviel */
         }
         input, textarea {
             background-color: #0a0a23;
             border: 1px solid #0a0a23;
             color: #ffffff;
-            min-height: 2em; /* aumentando a letra dos placeholder ficando mais visiviel */
+
         }
         
-        /*   
-             Selecione apenas os elementos .inline e dê a eles uma width de unset. Isso removerá a regra anterior que define todos os elementos input para width: 100%. 
-            */
+        /* Selecione apenas os elementos .inline e dê a eles uma width de unset. Isso removerá a regra anterior que define todos os elementos input para width: 100%.  */
         .inline {
+            margin: 0 0.5em 0 0; /* dando um espaçamento só para direita*/
              width:unset;
              vertical-align: middle; /* notara que os elementos estao altos demais na linha */
         }
+
         /*deixar um exmpleo de pseudo class*/ 
         fieldset:last-of-type {
             border-bottom: none;
         }
+
         /* corrigndo name="password para type="submit" "*/
+        /* editando o botao  submit*/
         input[type="submit"]{
             display: block;
             width: 60%;
+            height: 2em;
+            margin: 1em auto ; /* centralizando o botao submit*/
         }
 
     </style>
