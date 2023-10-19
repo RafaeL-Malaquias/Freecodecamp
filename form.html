@@ -11,11 +11,33 @@
             margin: 0;
             background-color: #1b1b32;
             color: #f5f6f7;
+            font-size: 16px;
+            font-family: Tahoma , sans-serif;
         }
-
+        h1 , p {
+            margin: 1em auto;
+            text-align: center;
+        }
+        form {
+            width: 60vw; /* tamanho do form */
+            max-width: 500px;
+            min-width: 300px;
+            margin: 0 auto; /* centralizando*/
+            padding-bottom: 2em;
+        }
+        fieldset {
+            border: none; /* removendo as borda de todos fildset*/
+            padding: 2rem 0; /* aumentando  */
+            border-bottom: 3px solid #3b3b4f;
+        }
         label{
             display: block;
             margin: 0.5em 0px;
+        }
+        input, textarea , select {
+            margin: 10px 0 0 0; /* margin em todos elementos*/
+            width: 100%; /* usanto tood width do pai*/
+            min-height: 2em;
         }
         input, textarea {
             background-color: #0a0a23;
@@ -56,15 +78,12 @@
                 </fieldset>
                 <fieldset>
                     <legend>Account type (required)</legend>
-                    <label for="personal-account"><input id="personal-account" type="radio" name="account-type" checked> Personal</label>
-                    <label for="business-account"><input id="business-account" type="radio" name="account-type"> Business</label>
-                </fieldset>
-                <fieldset>
-                    <a href=""></a>
+                    <label for="personal-account"><input id="personal-account" type="radio" name="account-type" checked class="inline"> Personal</label>
+                    <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline"> Business</label>
                 </fieldset>
                 <!--segunda box -->
                 <fieldset>
-                    <label for="profile-picture">Upload a profile picture:<input id="profile-picture" itype="file" name="file"></label>
+                    <label for="profile-picture">Upload a profile picture:<input id="profile-picture" type="file" name="file"></label>
                     <label for="age">Inpute your age (years): <input id="age" type="number" min="13" max="120"></label>
                     <label for="referrer">How did you hear about us?
                         <select name="referrer" id="referrer">
@@ -85,6 +104,5 @@
                 </label>
                 <input type="submit" value="Submit" />
         </form>
-    
 </body>
 </html>
