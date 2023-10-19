@@ -64,10 +64,10 @@
                 </fieldset>
                 <!--segunda box -->
                 <fieldset>
-                    <label for="">Upload a profile picture:<input type="file"></label>
-                    <label for="">Inpute your age (years): <input type="number" min="13" max="120"></label>
-                    <label for="">
-                        <select name="" id="">
+                    <label for="profile-picture">Upload a profile picture:<input id="profile-picture" itype="file" name="file"></label>
+                    <label for="age">Inpute your age (years): <input id="age" type="number" min="13" max="120"></label>
+                    <label for="referrer">How did you hear about us?
+                        <select name="referrer" id="referrer">
                             <option value="">(Select one)</option>
                             <option value="1">FreeCodeCamp News</option>
                             <option value="2">FreeCodeCamp YouTube Channel</option>
@@ -75,9 +75,15 @@
                             <option value="4">Other</option>
                         </select>
                     </label>
-                    <label for="" ></label>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label for="bio" >Provide a bio:
+                            <textarea id="bio" name="bio" cols="30" rows="10" placeholder="I like coding on the beach..."></textarea>
+                    </label>
                 </fieldset>
+                <label for="terms-and-conditions">
+                    <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>I aceept the <a href="">terms and conditions
+                    </a>
+                </label>
+                <input type="submit" value="Submit" />
         </form>
     
 </body>
