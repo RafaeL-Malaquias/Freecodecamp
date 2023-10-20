@@ -12,11 +12,11 @@
         <form action="" id="survey-form">
             <fieldset>
                 <label for="name">Name : </label>
-                <input type="text" id="name" placeholder="Enter your name" name="" required>
+                    <input type="text" id="name" placeholder="Enter your name" name="" required>
                 <label for="email">Email</label>
-                <input id="email" type="email" placeholder="Enter your Email" name="" required>
+                    <input id="email" type="email" placeholder="Enter your Email" name="" required>
                 <label for="age">Age (optinonal)</label>
-                <input id="number" type="number" placeholder="Age" name="age" required>
+                    <input id="number" type="number" min="18" placeholder="Age" name="age" required>
             </fieldset>
             <fieldset>
                 <p>Which option best describes your current role?</p>
@@ -30,7 +30,19 @@
                 </select>
             </fieldset>
             <fieldset>
-
+                <!--O input sempre tem que esta dentro do label é uma prática recomendada para melhorar a acessibilidade e a usabilidade da sua página da web.-->
+                <p>What would you like to see improved? (Check all that apply)</p>
+                    <label for=""><input type="radio" value="front-end"> Front-End Projects</label>
+                    <label for=""> <input type="radio"> Back-end Projects</label>
+                    <label for=""> <input type="radio"> Data Visualization</label>
+                    <label for=""> <input type="radio"> Challenges</label>
+                    <label for=""> <input type="radio"> Open Source Community</label>
+                    <label for=""> <input type="radio"> Gitter help rooms</label>
+                    <label for=""> <input type="radio"> Videos</label>
+                    <label for=""> <input type="radio"> City Meetups</label>
+                    <label for=""> <input type="radio"> Wiki</label>
+                    <label for=""> <input type="radio"> Forum</label>
+                    <label for=""> <input type="radio"> Additional Courses</label>
             </fieldset>
 
 
