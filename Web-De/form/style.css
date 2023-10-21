@@ -5,15 +5,64 @@
     --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
     --color-green: #37af65;
 }
+
 body { /* lembrando que para gradient funcionar precisa de 2 elemento*/
    /* background: var(--color-darkblue); */
     background-image: linear-gradient(115deg, rgba(58, 59, 158, 0.8), rgba(136, 136, 208, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
     margin: 0;
-    width: 100%;
     color: var(--color-white);
     font-weight: 400;
     line-height: 1.4;
     font-family: sans-serif;
     font-size: 1rem;
     letter-spacing: 1px;
+    display: block;
 }
+.container {
+    width: 100%;
+    margin: 50px auto 0 auto;
+}
+/* conteudo novo para reponsivo */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@midia (min-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+}
+.header {
+    text-align: center;
+    padding: 0 0.625rem;
+}
+
+#discription {
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    
+}
+fieldset {
+    border: none;
+}
+label  {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem ;
+    margin-bottom: 0.5rem;
+}
+input, button, section, textarea {
+    /* o inherit pega atributo do elemento pai*/
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+form {
+    background: var(--color-darkblue-alpha);
+    padding: 2.5rem 0.625rem;
+    border-radius: 0.25rem;
+  }
+  
