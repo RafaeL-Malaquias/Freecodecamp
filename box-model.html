@@ -11,8 +11,52 @@
             div class2
                 div class3 
                 aqui tem 3 caixa dentro da  a outra
-        
         */
+        .canvas{
+            width: 500px;
+            height: 600px;
+            background-color: #4d0f00;
+            overflow: hidden; /* poderia usar padding para aumentar também*/
+            filter: blur(1px);
+        }
+
+        .frame{
+            width: 500px;
+            border: 50px solid black;
+            padding: 50px;
+            margin: 20px auto;
+        }
+        .one {
+            width: 425px;
+            height: 150px;
+            background-color: darkkhaki;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 3px 3px darkkhaki;
+            transform: rotate(-0.6deg); /* podendo virar o elemento*/
+        }
+        .two {
+            width: 400px;
+            height: 200px;
+            background-color: darkred;
+            margin: 0 auto 20px;
+            border-radius: 10%;
+            box-shadow: 0 0 3px 3px #8f0401;
+            transform: rotate(1deg);
+        }
+        .three {
+            width: 91%;
+            height: 28%;
+            background-color: red;
+            margin: auto;
+            border-radius: 10px 20px 60px 5px;
+            box-shadow: 0  0 5px 5px red;
+        }
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -25,7 +69,12 @@
     Aqui, o elemento inferior tem uma margem superior maior, empurrando-o mais para baixo na página.
      img src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png" alt="" -->
     
-     
-    
+     <div class="frame"> <!-- primeira box-->
+        <div class="canvas"> <!--segunda box -->
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            </div>
+    </div>
 </body>
 </html>
