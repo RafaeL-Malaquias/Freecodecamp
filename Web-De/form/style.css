@@ -6,34 +6,85 @@
     --color-green: #37af65;
 }
 
-body { /* lembrando que para gradient funcionar precisa de 2 elemento*/
+body {
+     /* lembrando que para gradient funcionar precisa de 2 elemento*/
    /* background: var(--color-darkblue); */
     background-image: linear-gradient(115deg, rgba(58, 59, 158, 0.8), rgba(136, 136, 208, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
     color: var(--color-white);
+    display: block;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-white);
+    margin: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 .header {
+    font-size: 20px;
     text-align: center;
 }
 .title {
     font-size: 20px;    
 }
+p {
+    font-size: 1.125rem;
+}
 .discription{
+    font-size: 25px;
+    font-weight: 200;
     font-style: italic;
 }
 fieldset {
     border: none;
 }
-
+.survey-form {
+}
 form {
     display: block;
     background: var(--color-darkblue-alpha);
-    max-width: 750px;
+    max-width: 850px;
     min-width: 300px;
-    height: 1420px;
-    margin: 20px auto;
+    height: 1520px;
+    margin: 0 auto;
+    padding: 25px 40px;
+    border-radius: 5px;
   }
   label {
+    border: none;
     display: block;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.9rem;
   }
+#name, #email , #number-age{
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid var(--color-white);
+    border-radius: 1px;
+    border-color: var(--color-white);
+
+  }
+#number {
+    padding: 5px;
+    margin-right: 20px;
+}
+fieldset >p {
+    font-size: 550px;
+}
+#dropdown {
+
+}
+input, textarea, button, select {
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
 
   
