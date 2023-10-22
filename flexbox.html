@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
     <title>Flexbox</title>
+    <style>
+        * { 
+             /* Observe como a borda azul da imagem se estende para além da borda vermelha da galeria. Isto é devidoao modo como os navegadores         calculam o tamanho dos elementos do contêiner. A propriedade box-sizing é usada para definir esse comportamento. Por padrão, o modelo content-box é usado. Com esse modelo, quando um elemento tem uma largura específica, essa largura é calculada apenas com base no conteúdo do elemento. Os valores de preenchimento e das bordas são adicionados à largura total. Assim, o elemento cresce para acomodar esses valores.*/
+            box-sizing: content-box; 
+
+
+        }
+
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Flexabox photo gallery</h1>
+    </header>
+    <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
     
 </body>
 </html>
