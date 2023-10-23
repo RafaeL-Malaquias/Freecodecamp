@@ -42,6 +42,12 @@
         /* 
         A propriedade align-items posiciona o conteúdo do flex ao longo do eixo transversal. Neste caso, com flex-direction definido como row, o eixo cruzado seria vertical. 
         */
+        /* 
+        Gap > define as lacunas (gaps) também conhecidas como calhas entre as linhas e as olunas.
+            propriedades :
+            gap: row-gap
+            gap: column-gap
+        */
         .gallery {
             display: flex;
             flex-direction: row;
@@ -51,14 +57,15 @@
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px 10px;
+            gap: 16px;
         }
         .gallery img {
+            border-radius: 10px;
             width: 100%;
             max-width: 350px;
             height: 300px;
             object-fit: cover; /*  imagens ficaram distorcidas corre porque as imagens têm proporções diferente, voce pode usar propriedade object-fit: cover;, para preencher o conteiner */
         }
-
     </style>
 </head>
 <body>
