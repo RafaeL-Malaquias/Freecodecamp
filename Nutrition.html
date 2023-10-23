@@ -7,17 +7,57 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
     <title>Nutrition Label</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+        }
         body {
             font-family: "Open Sans", sans-serif;
         }
 
+        header h1{
+            text-align: center;
+            margin: -4px 0;  /* */
+            letter-spacing: 0.15px;
+        }
         .label{
             border: 2px solid black;
             width: 270px;
             margin: 20px auto; /* aqui 20px no top e auto nos lados*/
             padding: 0 7px ; /*0px para top 7px para todos lados*/
         }
+        p{
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* border-bottom */
+        .diveder{
+            border-bottom: 1px solid gray;
+            margin: 2px 0;
+        }
 
+        .bold {
+            font-weight: 800;
+        }
+        /* bordar - separa o header */
+        .large {
+            height: 10px;
+        }
+        .large , .medium {
+            background-color: black;
+            border: 0;
+        }
+        .small-text {
+            font-size: 0.85rem;
+        }
+        .calories-info h2 {
+            margin: 0;
+        }
+        
 
 
 
@@ -26,11 +66,20 @@
 </head>
 
 <body>
-    <div class="label">
-        <h1>Nutrition Facts</h1>
-            <p>8 servings per container</p>
-            <p>Serving size 2/3 cup (55g)</p>
-    </div>
-    
+            <div class="label">
+                <header >
+                    <h1 class="bold">Nutrition Facts</h1>
+                        <!--Linhas podem ajudar a separar e agrupar conteúdos importantes, especialmente quando o espaço é limitado.-->
+                        <div class="diveder"></div> <!--div so para border-bottom-->
+                        <p>8 servings per container</p>
+                        <p class="bold">Serving size <span>2/3 cup (55g)</span></p>
+                </header>
+
+                <div class="divider large"></div>
+                    <div class="calories-info">
+                        <div class="left-container">
+                        <p class="bold small-text">Amount per serving</p>
+                </div>
+             </div>
 </body>
 </html>
