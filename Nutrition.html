@@ -82,9 +82,15 @@
         .right {
             justify-content: flex-end;
         }
-        .diveder {
+        .diveder { /*Linhas de divisçao*/
             border-bottom: 1px solid #888989;
         }    
+        .indent {
+            margin-left: 1em;
+        }
+        .daily-value p:not(.no-divider) {
+            border-bottom: 1px solid #888989;
+        }
 
 
 
@@ -114,11 +120,11 @@
                         <div class="divider medium"></div>
                             <div class="daily-value small-text">
                                 <p class="bold right no-divider">% Daily Value *</p> <!--Colocando na direita da folha-->
-                                <div class="divider"></div>
+                                <div class="diveder"></div>
                                 <p><span><span class="bold">Total Fat</span> 8g</span><span class="bold">10%</span></p>
                                     <p class="indent no-divider"><span>Saturated Fat 1g<span class="bold">5%</span></p>
-                                    <div class="divider"></div>
-                                    <p class="indet no-divider"><span><i>Trans</i> Fat 0g</span></p>
+                                    <div class="diveder"></div>
+                                    <p class="indent no-divider"><span><i>Trans</i> Fat 0g</span></p>
                                     <div class="diveder"></div>
 
                         </div>
