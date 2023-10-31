@@ -38,7 +38,15 @@
             font-size: min(5vw, 1.2em); /* novo  de css*/
             text-align: center;
         }
+        h1,  h2 {
+            font-family: Verdana, Tahoma;
+            font-weight: ;
+        }
+        h2 {
+            border-bottom: 4px solid #dfdfe2;
+        }
 
+        /* navegação */
         /* pegado 50% espaçamento de 50% */
         nav {
             width: 50%;
@@ -46,21 +54,23 @@
             height: 50px;
 
         }
-
+        /*Em telas pequenas, a lista não ordenada na barra de navegação transborda do lado direito da tela.*/
+        /* corrigindo isso com flexbox*/
         nav>ul {
             display: flex;
             justify-content: space-evenly;
+            align-items: center;
+            padding-inline-start: 0;
+            margin-block: 0;
+            height: 100%;
+        }
+        nav> ul > li {
+            color: #dfdfe2;
+            margin: 0 0.2rem;
+            padding: 0.2rem;
+            display: block;
         }
 
-        h1,
-        h2 {
-            font-family: Verdana, Tahoma;
-            font-weight: ;
-        }
-
-        h2 {
-            border-bottom: 4px solid #dfdfe2;
-        }
         /*span do date*/
         .sr-only {
             position: absolute;
