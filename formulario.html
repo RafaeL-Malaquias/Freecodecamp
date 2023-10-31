@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <title>Formulario de registro</title>
     <style>
-        body{
+        body {
             background-color: #f6f6f7;
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
         }
+
         header {
             width: 100%;
             height: 50px;
             background-color: #1b1b32;
             display: flex;
         }
+
         #logo {
             width: max(100px, 18vw);
             background-color: #0a0a23;
@@ -28,81 +31,139 @@
             color: #f1be32;
             font-family: sans-serif;
         }
+
         /* pegado 50% espaçamento de 50% */
-        nav{
+        nav {
             width: 50%;
             max-width: 300px;
             height: 50px;
 
         }
+
         nav>ul {
             display: flex;
             justify-content: space-evenly;
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             font-family: Verdana, Tahoma;
         }
+
         h2 {
             border-bottom: 4px solid #dfdfe2;
         }
-
     </style>
 </head>
+
 <body>
     <header>
         <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="">
-            <h1>HTML/CSS Quiz</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">INFO</a></li>
-                    <li><a href="">HTML</a></li>
-                    <li><a href="">CSS</a></li>
-                </ul>
-            </nav>
+        <h1>HTML/CSS Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="#">INFO</a></li>
+                <li><a href="">HTML</a></li>
+                <li><a href="">CSS</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post"></form>
-        <section role="region" aria-labelledby="" >
-            <h2 class="student-info">Student info</h2>
+        <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+            <section role="region" aria-labelledby="">
+                <h2 class="student-info">Student info</h2>
 
-            <div class="info">
-                <label for="nome">Name:</label>
-                <input type="text" id="student-nome" name="student-nome">
-            </div>
+                <div class="info">
+                    <label for="nome">Name:</label>
+                    <input type="text" id="student-nome" name="student-nome">
+                </div>
 
-            <div class="info">
-                <label for="email">Email:</label>
+                <div class="info">
+                    <label for="email">Email:</label>
                     <input type="email" id="student-email" name="student-email">
-            </div>
+                </div>
 
-            <div class="info">
-                <label for="date">D.O.B. </label>
+                <div class="info">
+                    <label for="date">D.O.B. </label>
                     <input type="date" id="birth-date" name="birth-date">
-            </div>
-        </section>
+                </div>
+            </section>
 
-        <section role="region" aria-labelledby="html-questions">
-            <h2 class="html-questions">HTML</h2>
-            <div class="question-block">
-                <p>1</p>
-                <fieldset class="question" name="html-questions-one">
-                    <legend></legend>
-                    <ul>
-                        <li><label for="">
-                            <input type="radio">
+            <section role="region" aria-labelledby="html-questions">
+                <h2 class="html-questions">HTML</h2>
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset class="question" name="html-questions-one">
+                        <legend>O elemento legend representa uma legenda para o conteúdo de seu
+                            elemento do conjunto de campos pai</legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q1-a1">
+                                    <input type="radio" id="q1-a1" name="q1" value="true"> True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1a-2">
+                                    <input type="radio" name="q1" value="false"> False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset class="question" name="html-questions-two">
+                        <label for="">Um elemento de rótulo aninhando um elemento de entrada deve ter um
+                            for atributo com o mesmo valor do id da entrada
                         </label>
-                        </li>
-                        <li>
-                            <label for="">
-                        <input type="radio"></label>
-                        </li>
-                    </ul>
-                </fieldset>
-            </div>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q1-a1">
+                                    <input type="radio" id="q1-a1" name="q1" value="true"> True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1a-2">
+                                    <input type="radio" name="q1" value="false"> False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </section>
 
-        </section>
+            <section role="region" aria-labelledby="css-questions">
+                <h2 class="css-questions">CSS</h2>
+                <div class="question-block">
+                    <label for="customer">Are you a frontend developer?</label>
+                </div>
+                <div class="answers">
+                    <select name="customer" id="customer" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="question-block">
+                    <label for="css-questions">Do you have any questions:</label>
+                </div>
+                <div class="answers">
+                    <textarea name="" id="" cols="20" rows="2"></textarea>
+                </div>
+                </div>
+            </section>
+            <button type="submit">Enviar</button>
+        </form>
     </main>
-    
+    <footer>
+        <address>
+            <a href="https://freecodecamp.org">freeCodeCamp</a><br>
+            San Francisco <br>
+            California <br>
+            USA
+        </address>
+    </footer>
 </body>
 </html>
