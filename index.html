@@ -5,12 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
     <title>Document</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: sans-serif;
+            color: black;
+        }
+
+        span[class~="sr-only"]{
+            border: 0;
+            clip: rect(1px , 1px , 1px ,1px);
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px; 
+            overflow: hidden;  /*Para evitar que o conteúdo do texto exceda defina overflow hidden e white-space:nowrap*/
+            white-space: nowrap;
+            position: absolute; /*removendo o elemnto do fluxo*/
+            padding: 0;
+            margin: -1px;
+        }
+        h1 {
+            max-width: 37.25rem;
+            margin: 0 auto;
+            padding: 1.5rem 1.25rem;
+        }
+        h1 .flex {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+        h1 .flex span:first-of-type {
+            font-size: 0.7em;
+        }
+        h1 .flex span:last-of-type{
+            font-size: 1.2em;
+        }
+
+        section {
+            max-width: 40rem;
+            margin: 0 auto;
+            border: 2px solid #d0d0d5;
+        }
+        #year {
+            display: flex;
+            justify-content: flex-end;
+            top: 0;
+            position: sticky;
+            color: #fff;
+            background: #0a0a23;
+        }
+    </style>
 </head>
 <body>
             <main>
                 <section>
                     <h1>
-                        <span>
+                        <span class="flex">
                             <span>AcmeWidgetCorp</span>
                             <span>Balance Shee</span>
                         </span>
@@ -100,11 +152,26 @@
                                 </tr>
                             </tbody>
                         </table>
-
-                        <table></table>
+                        <table>
+                                <caption>Net Worth</caption>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                        <th><span class="sr-only">2019</span></th>
+                                        <th><span class="sr-only">2020</span></th>
+                                        <th><span class="sr-only">2021</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="total">
+                                    <th>Total <span class="sr-only">Net Worth</span></th>
+                                    <td>$-171</td>
+                                    <td>$136</td>
+                                    <td class="current">$334</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-
-
                 </section>
             </main>    
 </body>
