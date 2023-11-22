@@ -14,17 +14,17 @@
             color: black;
         }
 
-        span[class~="sr-only"]{
-            border: 0;
-            clip: rect(1px , 1px , 1px ,1px);
-            clip-path: inset(50%);
-            width: 1px;
-            height: 1px; 
-            overflow: hidden;  /*Para evitar que o conteúdo do texto exceda defina overflow hidden e white-space:nowrap*/
-            white-space: nowrap;
-            position: absolute; /*removendo o elemnto do fluxo*/
-            padding: 0;
-            margin: -1px;
+        span[class~="sr-only"]{ /*Ao invés de ter que verificar constantemente se você não está substituindo as propriedades anteriores, você pode usar a palavra-chave !important para garantir que essas propriedades sejam sempre aplicadas, independentemente da ordem ou da especificidade.*/
+            border: 0 !important;
+            clip: rect(1px , 1px , 1px ,1px) !important;
+            clip-path: inset(50%) !important;
+            width: 1px !important;
+            height: 1px !important; 
+            overflow: hidden !important;  /*Para evitar que o conteúdo do texto exceda defina overflow hidden e white-space:nowrap*/
+            white-space: nowrap !important;
+            position: absolute !important; /*removendo o elemnto do fluxo*/
+            padding: 0 !important;
+            margin: -1px !important;
         }
         h1 {
             max-width: 37.25rem;
@@ -48,7 +48,7 @@
             margin: 0 auto;
             border: 2px solid #d0d0d5;
         }
-        #year {
+        #years {
             display: flex;
             justify-content: flex-end;
             top: 0;
@@ -56,7 +56,31 @@
             color: #fff;
             background: #0a0a23;
             margin: 0 -2px;
-            padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0; /* calc() é uma função do CSS que permite calcular um valor baseado em outros valores*/
+            padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+            /* calc() é uma função do CSS que permite calcular um valor baseado em outros valores*/
+            z-index: 999;
+        }
+        #years span[class] {
+            font-weight: bold;
+            width: 4.5rem;
+            text-align: right;
+        }
+        .table-wrap{
+            padding: 0 0.75rem 1.5rem 0.75rem;
+        }
+
+        span {   /* not(.sr-only)  como colocou !important no sr-only pode remover do elemento   /* pseudosseletor é usado para direcionar todos os elementos que não coincidem com o  seletor - neste caso qualquer dos elementos span que não possua a classe sr-only. Isso garante que as regras anteriores para o seletor span[class~="sr-only"] não sejam substituídas.*/
+            font-weight: normal;
+        } 
+        table {
+            border-collapse: collapse;
+            border: 0;
+            position: relative;
+            width: 100%;
+            margin-top: 3rem;
+        }
+        table caption {
+            
         }
     </style>
 </head>
@@ -69,7 +93,8 @@
                             <span>Balance Shee</span>
                         </span>
                     </h1>
-                    <div id="year" aria-hidden="true">
+
+                    <div id="years" aria-hidden="true">
                         <span class="year">2019</span>
                         <span class="year">2020</span>
                         <span class="year">2021</span>
