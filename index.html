@@ -80,7 +80,42 @@
             margin-top: 3rem;
         }
         table caption {
-            
+            color: #356eaf;
+            font-size: 1.3em;
+            font-weight: normal;
+            position: absolute; /* removendo do fluxo*/
+            top: -2.25rem;
+            left: 0.5rem;
+        }
+        tybody td {
+            min-width: 4rem;
+            max-width: 4rem;
+            width: 100vw;
+        }
+        tbody th {
+            width: calc(100% -  12rem);
+        }
+        tr[class="total"] { /* o seletor visa que tenha atributo com valor especifico como class=total */
+            border-bottom: 4px double #0a0a23;
+            font-weight: bold;
+        }
+        tr[class="total"] th { /* */
+            text-align: left;
+            padding: 0.5rem 0 0.25rem 0.5rem;
+        }
+        /*A diferença principal entre tr[class="total"] e tr.total é que o primeiro selecionará os elementos tr onde a classe for apenas total. O segundo selecionará os elementos tr em que a(s) class(es) incluam total.*/
+        tr.total td {
+            text-align: right;
+            padding: 0 0.25rem;
+        }
+        tr.total td:nth-of-type(3){
+            padding: 0.5rem;
+        }
+        tr.total:hover {
+            background: #99c9ff;
+        }
+        td.current {
+            font-style: italic;
         }
     </style>
 </head>
@@ -106,9 +141,9 @@
                             <thead>
                                 <tr>
                                     <td>
-                                        <th><span class="sr-onle year"> 2019</span></th>
-                                        <th><span class="sr-onle year"> 2020</span></th>
-                                        <th class="current"><span class="sr-onle year"> 2021</span></th>
+                                        <th><span class="sr-only year"> 2019</span></th>
+                                        <th><span class="sr-only year"> 2020</span></th>
+                                        <th class="current"><span class="sr-only year"> 2021</span></th>
                                     </td>
                                 </tr>
                             </thead>
