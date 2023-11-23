@@ -69,9 +69,10 @@
             padding: 0 0.75rem 1.5rem 0.75rem;
         }
 
-        span {   /* not(.sr-only)  como colocou !important no sr-only pode remover do elemento   /* pseudosseletor é usado para direcionar todos os elementos que não coincidem com o  seletor - neste caso qualquer dos elementos span que não possua a classe sr-only. Isso garante que as regras anteriores para o seletor span[class~="sr-only"] não sejam substituídas.*/
+        /*
+        span {   /* not(.sr-only)  como colocou !important no sr-only pode remover do elemento   pseudosseletor é usado para direcionar todos os elementos que não coincidem com o  seletor - neste caso qualquer dos elementos span que não possua a classe sr-only. Isso garante que as regras anteriores para o seletor span[class~="sr-only"] não sejam substituídas.
             font-weight: normal;
-        } 
+        } */
         table {
             border-collapse: collapse;
             border: 0;
@@ -112,11 +113,36 @@
             padding: 0.5rem;
         }
         tr.total:hover {
+            transition: all 1s;
             background: #99c9ff;
         }
         td.current {
             font-style: italic;
         }
+        tr.data{
+            background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+        }
+         tr.data th{ /* aqui ele pegos as class tr data e th*/
+            text-align: left;
+            padding: 0.3rem 0 0 0.5rem;
+        }
+        tr.data th .description {
+            display: block;
+            font-style: italic;
+            font-weight: normal;
+            padding: 1rem 0 0.75rem;
+            margin-right: -13.5rem;
+        }
+        tr.data td {
+         vertical-align: top;
+         text-align: right;
+         padding: 0.3rem 0.25rem 0;
+        }
+        tr.data td:last-of-type {   /*selecionando o ultimo filho*/
+            padding-right: 0.5rem;
+        }
+
+        
     </style>
 </head>
 <body>
