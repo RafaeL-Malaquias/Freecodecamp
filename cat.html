@@ -14,13 +14,51 @@
         }
         .cat-head{
             position: absolute;
-            top: 100px;
-            left: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
             width: 205px;
-            height: 190px;
+            height: 180px;
             border: 1px solid #000;
-            border-radius: 50%;
+            border-radius: 46%;
             background-image: linear-gradient(#5e5e5e 85%, #45454f 100%);
+        }
+        .cat-left-ear { /* fazer orelha parecer um triangulo*/
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+           border-bottom: 70px solid #5e5e5e;
+           position: absolute;
+           top: -26px;
+           left: -31px;
+           border-top-left-radius: 90px;
+           border-top-right-radius: 10px;
+           transform: rotate(-45deg);
+        }
+        .cat-right-ear{
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+           border-bottom: 70px solid #5e5e5e;
+           position: absolute;
+           top: -26px;
+           right: -31px;
+           border-top-right-radius: 90px;
+           border-top-left-radius: 10px;
+           transform: rotate(45deg);
+           /* z-index: -1; /* pode usar para definir a order de sobreposição dos elementos, maior sempre será posicionado um elemento com um z- menor.*/
+        }
+        .cat-left-inner-ear { /* aqui estamos fazendo orelha inner */
+            position: absolute;
+            top: 22px;
+            left: -20px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 90px;
+            border-bottom: 40px solid  #3b3b4f;
+            border-bottom-right-radius: 40%;
+            border-bottom-left-radius: 40%;
         }
     </style>
 </head>
