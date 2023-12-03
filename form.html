@@ -10,8 +10,7 @@
             height: 100vh;
             margin: 0;
             background-color: #1b1b32;
-            color: #f5f6f7;
-            font-size: 16px;
+            color: #f7f5f5;
             font-family: Tahoma , sans-serif;
         }
         h1 {
@@ -28,14 +27,15 @@
             max-width: 500px;
             min-width: 300px;
             margin: 0 auto; /* centralizando*/
-            padding-bottom: 2em;
         }
+
         fieldset {
             border: none; /* removendo as borda de todos fildset*/
             padding: 2rem 0; /* aumentando  */
             border-bottom: 3px solid #3b3b4f;
         }
         label{
+            display: block;
             align-items: center;
             margin: 0.5em 0px;
         }
@@ -52,7 +52,7 @@
         }
         
         /* Selecione apenas os elementos .inline e dê a eles uma width de unset. Isso removerá a regra anterior que define todos os elementos input para width: 100%.  */
-        .inline {
+            .inline {
             margin: 0 0.5em 0 0; /* dando um espaçamento só para direita*/
              width:unset;
              vertical-align: middle; /* notara que os elementos estao altos demais na linha */
@@ -85,6 +85,7 @@
             letter-spacing: 1px;
             cursor: pointer;
         }
+
         /*-------------*/
         input[type="file"]{
             padding: 10px 10px 3px 5px;
