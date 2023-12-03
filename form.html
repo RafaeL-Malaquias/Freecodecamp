@@ -83,6 +83,7 @@
             background-color: greenyellow;
             border-color: black;
             letter-spacing: 1px;
+            cursor: pointer;
         }
         /*-------------*/
         input[type="file"]{
@@ -93,18 +94,32 @@
         }
         input[type='checkbox'] {
         accent-color: rgb(0, 255, 21); /* unica maneira de mudar a cor da box cheack foir accent-color*/
+        cursor: pointer;
         }
         .terms-checkbox {
             margin-bottom: 15px;
         }
-        .terms {
-            text-align: center;
-        }
+
         /* O texto .sr-only ainda está visível. Existe um padrão comum para ocultar visualmente o texto para que apenas os leitores de tela leiam.
         Este padrão é para definir as seguintes propriedades do CSS:*/
         .sr-only{
             
         }
+    .container-terms{
+        border: 1px solid rgb(255, 255, 255);
+        padding: 10px;
+    }
+    .terms-text, a {
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .terms-text  {
+        margin: 0 -50px 0 0;
+    }
+
+
 
 
     </style>
@@ -142,10 +157,16 @@
                             <textarea id="bio" name="bio" cols="30" rows="10" placeholder="I like coding on the beach..."></textarea>
                     </label>
                 </fieldset>
+
+                <div class="container-terms">
                 <label for="terms-and-conditions" class="terms">
-                    <input class="terms-checkbox" type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>I aceept the <a href="">terms and conditions
-                    </a>
-                </label>
+                    <input class="terms-checkbox" type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required></label>
+
+                    <span class="terms-text">
+                    I aceept the <a href="">terms and conditions
+                    </a></span>
+            </div>
+
                 <input type="submit" value="Submit" />
         </form>
 </body>
