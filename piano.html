@@ -7,9 +7,9 @@
     <title>Piano</title>
     <style>
         html {
-            box-sizing:inherit;
+            box-sizing: border-box;
         }
-        *, ::before, ::after {
+        *, *::before, *::after {
             box-sizing: inherit;
         }
         #piano {
@@ -20,14 +20,14 @@
             padding: 90px 20px 0 20px;
             position: relative;
             border-radius: 10px;
-            
         }
+
         .keys {
             background-color: #040404;
             width: 949px;
             height: 180px;
             padding-left: 2px;
-            
+            overflow: hidden;
         }
         .key {
             background-color: #fff;
@@ -40,18 +40,22 @@
         .key.black--key::after{
             background-color: #1d1e22;
             content: "";
-            position: relative;
+            position: absolute;
             width: 32px;
             height: 100px;
             left: -18px;
         }
+        .logo {
+            width: 200px;
+            position: absolute;
+            top: 23px;
+        }
     </style>
 </head>
 <body>
-    <div id="Piano">
+    <div id="piano">
             <img class="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo">
         <div class="keys">
-            <img class="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="FreeCodeCamp Logo">
             <div class="key"></div>
             <div class="key black--key"></div>
             <div class="key black--key"></div>
